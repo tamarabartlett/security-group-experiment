@@ -1,6 +1,7 @@
 Things I did
 - Created test template
-	-aws cloudformation validate-template --template-body file://tamara-test.template
-	-aws cloudformation create-stack --stack-name tamara --template-body file://tamara-test.template
-	-aws cloudformation delete-stack --stack-name tamara
-	-aws cloudformation deploy --template-file tamara-test.template --stack-name tamara
+	$aws cloudformation validate-template --template-body file://tamara-test.template
+	$aws cloudformation create-stack --stack-name tamara --template-body file://tamara-test.template
+	$aws cloudformation delete-stack --stack-name tamara
+	$aws cloudformation deploy --template-file tamara-test.template --stack-name tamara
+	$aws ec2 describe-security-groups --group-names tamara-sec-groups-PingAndSshSecurityGroupTamara-1PHGHOLGZWNB9

@@ -1,0 +1,31 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Description" : "Create a single EC2 instance in AWS",
+
+  "Resources" : {
+      "InstanceOneTamara" : {
+        "Type" : "AWS::EC2::Instance",
+        "Properties" : {
+          "InstanceType" : "t1.micro",
+          "SecurityGroupIds" : ["tamara-sec-groups-PingAndSshSecurityGroupTamara-1PHGHOLGZWNB9"],
+          "ImageId" : "ami-7f77b31f",
+          "KeyName" : "tamara-test",
+          "Tags" : [
+            {"Key" : "Name", "Value" : "Tamara Instance 1"}
+          ]
+        }
+      },
+      "InstanceTwoTamara" : {
+        "Type" : "AWS::EC2::Instance",
+        "Properties" : {
+          "InstanceType" : "t1.micro",
+          "SecurityGroupIds" : ["tamara-sec-groups-PingAndSshSecurityGroupTamara-1PHGHOLGZWNB9"],
+          "ImageId" : "ami-7f77b31f",
+          "KeyName" : "tamara-test",
+          "Tags" : [
+              {"Key" : "Name", "Value" : "Tamara Instance 2"}
+            ]}
+      }
+    }
+}

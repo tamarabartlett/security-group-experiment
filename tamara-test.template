@@ -1,0 +1,42 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Description" : "Create a single EC2 instance in AWS",
+
+  "Resources" : {
+      "tamaraInstanceA" : {
+        "Type" : "AWS::EC2::Instance",
+        "Properties" : {
+          "InstanceType" : "t1.micro",
+          "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ],
+          "ImageId" : "ami-7f77b31f",
+          "KeyName" : "tamara-test",
+          "Tags" : [
+            {"Key" : "Name", "Value" : "Tamara Instance 2"}
+          ]
+        }
+      },
+      "tamaraInstanceB" : {
+        "Type" : "AWS::EC2::Instance",
+        "Properties" : {
+          "InstanceType" : "t1.micro",
+          "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ],
+          "ImageId" : "ami-7f77b31f",
+          "KeyName" : "tamara-test",
+          "Tags" : [
+              {"Key" : "Name", "Value" : "Tamara Instance 2"}
+            ]}
+      },
+  
+      "InstanceSecurityGroup" : {
+        "Type" : "AWS::EC2::SecurityGroup",
+        "Properties" : {
+          "GroupDescription" : "SG to test ping",
+            "SecurityGroupIngress" : [ 
+              { "IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0" },
+              { "IpProtocol" : "icmp", "FromPort" : "8", "ToPort" : "-1", "CidrIp" : "0.0.0.0/0" }
+            ]
+        }
+      }
+    }
+}

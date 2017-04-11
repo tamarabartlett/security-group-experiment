@@ -5,3 +5,10 @@ Things I did
 	$aws cloudformation delete-stack --stack-name tamara
 	$aws cloudformation deploy --template-file tamara-test.template --stack-name tamara
 	$aws ec2 describe-security-groups --group-names tamara-sec-groups-PingAndSshSecurityGroupTamara-1PHGHOLGZWNB9
+
+
+Server spec
+On local instance:
+
+$ gem install serverspect
+$ serverspec-init

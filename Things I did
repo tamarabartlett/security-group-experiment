@@ -8,7 +8,11 @@ Things I did
 
 
 Server spec
-On local instance:
-
-$ gem install serverspect
+On ec2 instance:
+$ sudo yum update -y
+$ gem install serverspec
 $ serverspec-init
+Ralph
+
+$gem i bundle
+$mkdir serverspec

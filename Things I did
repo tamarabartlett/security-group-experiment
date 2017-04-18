@@ -16,3 +16,8 @@ Ralph
 
 $gem i bundle
 $mkdir serverspec
+Ralph
+
+scp -i tamara-test.pem ping-test.sh ec2-user@ec2-54-189-228-228.us-west-2.compute.amazonaws.com:~/
+ssh -i "tamara-test.pem" ec2-user@ec2-54-189-228-228.us-west-2.compute.amazonaws.com
+./ping-test.sh ec2-54-188-2-123.us-west-2.compute.amazonaws.com

@@ -4,27 +4,27 @@
   "Description" : "Create a single EC2 instance in AWS",
 
   "Resources" : {
-      "InstanceOneTamara" : {
+      "InstanceOneStelligentBlog" : {
         "Type" : "AWS::EC2::Instance",
         "Properties" : {
           "InstanceType" : "t1.micro",
-          "SecurityGroupIds" : ["tamara-sec-groups-PingAndSshSecurityGroupTamara-1PHGHOLGZWNB9"],
+          "SecurityGroupIds" : ["stelligent-blog-security-groups-PingAndSshSecurityGroupStelligentBlog-1PHGHOLGZWNB9"],
           "ImageId" : "ami-7f77b31f",
-          "KeyName" : "tamara-test",
+          "KeyName" : "stelligent-blog-test",
           "Tags" : [
-            {"Key" : "Name", "Value" : "Tamara Instance 1"}
+            {"Key" : "Name", "Value" : "StelligentBlog Instance 1"}
           ]
         }
       },
-      "InstanceTwoTamara" : {
+      "InstanceTwoStelligentBlog" : {
         "Type" : "AWS::EC2::Instance",
         "Properties" : {
           "InstanceType" : "t1.micro",
-          "SecurityGroupIds" : ["tamara-sec-groups-PingAndSshSecurityGroupTamara-1PHGHOLGZWNB9"],
+          "SecurityGroupIds" : ["stelligent-blog-security-groups-PingAndSshSecurityGroupStelligentBlog-1PHGHOLGZWNB9"],
           "ImageId" : "ami-7f77b31f",
-          "KeyName" : "tamara-test",
+          "KeyName" : "stelligent-blog-test",
           "Tags" : [
-              {"Key" : "Name", "Value" : "Tamara Instance 2"}
+              {"Key" : "Name", "Value" : "StelligentBlog Instance 2"}
             ]}
       }
     }

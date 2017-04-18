@@ -7,7 +7,7 @@
       "PingAndSshSecurityGroupStelligentBlog" : {
         "Type" : "AWS::EC2::SecurityGroup",
         "Properties" : {
-          "GroupDescription" : "SG to test ping"
+          "GroupDescription" : "Security group that does not allow ping"
         }
       }
     },

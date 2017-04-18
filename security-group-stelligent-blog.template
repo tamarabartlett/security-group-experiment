@@ -4,13 +4,16 @@
   "Description" : "Create a security group for EC2 instances",
 
   "Resources" : {
-      "PingAndSshSecurityGroupStelligentBlog" : {
-        "Type" : "AWS::EC2::SecurityGroup",
-        "Properties" : {
-          "GroupDescription" : "Security group that does not allow ping"
-        }
+    "PingAndSshSecurityGroupStelligentBlog" : {
+      "Type" : "AWS::EC2::SecurityGroup",
+      "Properties" : {
+        "GroupDescription" : "Security group that does not allow ping",
+        "SecurityGroupIngress" : [ 
+            { "IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0" }
+        ]
       }
-    },
+    }
+  },
   "Outputs" : {
     "SecurityGroupID" : {
       "Description" : "Security Group ID",

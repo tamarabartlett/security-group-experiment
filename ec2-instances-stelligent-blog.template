@@ -8,7 +8,7 @@
         "Type" : "AWS::EC2::Instance",
         "Properties" : {
           "InstanceType" : "t1.micro",
-          "SecurityGroupIds" : ["stelligent-blog-security-groups-PingAndSshSecurityGroupStelligentBlog-1NSJ7GADJHF2C"],
+          "SecurityGroupIds" : ["stelligent-blog-security-groups-PingAndSshSecurityGroupStelligentBlog-DGVKCW4AH7A4"],
           "ImageId" : "ami-7f77b31f",
           "KeyName" : "stelligent-blog-test",
           "Tags" : [
@@ -20,7 +20,7 @@
         "Type" : "AWS::EC2::Instance",
         "Properties" : {
           "InstanceType" : "t1.micro",
-          "SecurityGroupIds" : ["stelligent-blog-security-groups-PingAndSshSecurityGroupStelligentBlog-1NSJ7GADJHF2C"],
+          "SecurityGroupIds" : ["stelligent-blog-security-groups-PingAndSshSecurityGroupStelligentBlog-DGVKCW4AH7A4"],
           "ImageId" : "ami-7f77b31f",
           "KeyName" : "stelligent-blog-test",
           "Tags" : [
